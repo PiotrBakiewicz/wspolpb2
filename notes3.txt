@@ -1,0 +1,72 @@
+Initial commit
+
+Untracked files:
+	calc.c
+	calc.c~
+	calc.o
+	calcnotes.txt
+
+nothing added to commit but untracked files present
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "stworzenie kalkulatora"
+[master (root-commit) 2ce5efb] stworzenie kalkulatora
+ 4 files changed, 115 insertions(+)
+ create mode 100644 calc.c
+ create mode 100644 calc.c~
+ create mode 100755 calc.o
+ create mode 100644 calcnotes.txt
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git remote add origin https://github.com/PiotrBakiewicz/wspolpb2.git
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git push -u origin master
+Username for 'https://github.com': PiotrBakiewicz
+Password for 'https://PiotrBakiewicz@github.com': 
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 3.44 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/PiotrBakiewicz/wspolpb2.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+piotr@piotr-VirtualBox:~/Pulpit/calc$  nano notescalc2.txt
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "calc2"
+[master c70fbc8] calc2
+ 1 file changed, 226 insertions(+)
+ create mode 100644 notescalc2.txt
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': PiotrBakiewicz
+Password for 'https://PiotrBakiewicz@github.com': 
+Counting objects: 4, done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.87 KiB | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/PiotrBakiewicz/wspolpb2.git
+   2ce5efb..c70fbc8  master -> master
+piotr@piotr-VirtualBox:~/Pulpit/calc$ 
+
