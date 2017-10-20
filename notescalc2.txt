@@ -1,0 +1,226 @@
+piotr@piotr-VirtualBox:~$ pwd
+/home/piotr
+piotr@piotr-VirtualBox:~$ cd Pilpit
+bash: cd: Pilpit: Nie ma takiego pliku ani katalogu
+piotr@piotr-VirtualBox:~$ cd Pulpit
+piotr@piotr-VirtualBox:~/Pulpit$ cd calc
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "kalkulator"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	zmodyfikowany:    calc.c
+	deleted:          ../pierwszyprogram.c
+
+Untracked files:
+	calc.c~
+
+no changes added to commit
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	zmodyfikowany:    calc.c
+	new file:         calc.c~
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:          ../pierwszyprogram.c
+
+piotr@piotr-VirtualBox:~/Pulpit/calc$ gcc calc.c -o calc.o
+piotr@piotr-VirtualBox:~/Pulpit/calc$ ./calc.o
+
+4+5
+Wynik dzialania to 9
+piotr@piotr-VirtualBox:~/Pulpit/calc$ ./calc.o
+4/2
+Wynik dzialania to 2
+piotr@piotr-VirtualBox:~/Pulpit/calc$ nano calcnotes.txt
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "kalkulator"
+[master a2dd283] kalkulator
+ 2 files changed, 68 insertions(+), 46 deletions(-)
+ rewrite calc/calc.c (99%)
+ create mode 100644 calc/calc.c~
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:         calc.o
+	new file:         calcnotes.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:          ../pierwszyprogram.c
+
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git remote add origin https://github.com/PiotrBakiewicz/wspolpb2.git
+fatal: remote origin already exists.
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git push -u origin master
+Username for 'https://github.com': PiotrBakiewicz
+Password for 'https://PiotrBakiewicz@github.com': 
+Counting objects: 15, done.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 6.97 KiB | 0 bytes/s, done.
+Total 13 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/PiotrBakiewicz/wspolpb3.git
+   faafac3..a2dd283  master -> master
+Branch master set up to track remote branch master from origin.
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': PiotrBakiewicz
+Password for 'https://PiotrBakiewicz@github.com': 
+Everything up-to-date
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:         calc.o
+	new file:         calcnotes.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:          ../pierwszyprogram.c
+
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "kalkulator"
+[master bcb428f] kalkulator
+ 2 files changed, 47 insertions(+)
+ create mode 100755 calc/calc.o
+ create mode 100644 calc/calcnotes.txt
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:          ../pierwszyprogram.c
+
+no changes added to commit (use "git add" and/or "git commit -a")
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git init
+Initialized empty Git repository in /home/piotr/Pulpit/calc/.git/
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	calc.c
+	calc.c~
+	calc.o
+	calcnotes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+	add
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	calc.c
+	calc.c~
+	calc.o
+	calcnotes.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "kalkulator"
+On branch master
+
+Initial commit
+
+Untracked files:
+	calc.c
+	calc.c~
+	calc.o
+	calcnotes.txt
+
+nothing added to commit but untracked files present
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "stworzenie kalkulatora"
+On branch master
+
+Initial commit
+
+Untracked files:
+	calc.c
+	calc.c~
+	calc.o
+	calcnotes.txt
+
+nothing added to commit but untracked files present
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git add .
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git commit -m "stworzenie kalkulatora"
+[master (root-commit) 2ce5efb] stworzenie kalkulatora
+ 4 files changed, 115 insertions(+)
+ create mode 100644 calc.c
+ create mode 100644 calc.c~
+ create mode 100755 calc.o
+ create mode 100644 calcnotes.txt
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git remote add origin https://github.com/PiotrBakiewicz/wspolpb2.git
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git push -u origin master
+Username for 'https://github.com': PiotrBakiewicz
+Password for 'https://PiotrBakiewicz@github.com': 
+Counting objects: 5, done.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 3.44 KiB | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/PiotrBakiewicz/wspolpb2.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+piotr@piotr-VirtualBox:~/Pulpit/calc$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working directory clean
+piotr@piotr-VirtualBox:~/Pulpit/calc$ 
